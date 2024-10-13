@@ -50,7 +50,7 @@ const EvaluationPage = () => {
         <div className="flex flex-col items-center justify-center min-h-screen px-4 font-rubik bg-gray-100">
             {/* Chat Bubble */}
             <div className="flex items-start space-x-4 max-w-xl w-full mb-6">
-                <img src={finpalImage} alt="FinPal" className="w-16 h-16 rounded-full" draggable="false" />
+                <img src={finpalImage} alt="FinPal" className="w-16 h-16 rounded-full" draggable="false"/>
                 <div className="relative bg-white p-4 rounded-lg shadow-md">
                     <p className="text-gray-800 typing-animation">
                         Hola! 😊 ¿En qué puedo ayudarte hoy?
@@ -93,6 +93,7 @@ const EvaluationPage = () => {
                     </div>
                 </div>
             )}
+
         </div>
     );
 

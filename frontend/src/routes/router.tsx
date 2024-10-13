@@ -1,7 +1,6 @@
 import { RouteObject, createBrowserRouter } from "react-router-dom";
 import { ROUTES } from "./constants";
-import {Home, LogInPage, SignUpPage, EvaluationPage, FinPalHome} from "../pages";
-import LearningPathPage from "../pages/LearningPath/LearningPath.tsx";
+import {Home, LogInPage, SignUpPage, EvaluationPage, FinPalHome, LearningPath, ChatbotPage} from "../pages";
 
 const routes: RouteObject[] = [
     {
@@ -26,7 +25,11 @@ const routes: RouteObject[] = [
     },
     {
         path: ROUTES.LEARNINGPATH,
-        element: <LearningPathPage/>
+        element: <LearningPath/>
+    },
+    {
+        path:ROUTES.CHATBOT,
+        element:<ChatbotPage/>
     }
 
 ];

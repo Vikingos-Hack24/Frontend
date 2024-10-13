@@ -4,6 +4,8 @@ import React from 'react';
 import { Tree } from "../../components";
 import { LogButton } from "../../components";
 import { useNavigate, useLocation } from "react-router-dom";
+import {ROUTES} from "../../routes";
+import finpalImage from "/pal_icon_happy.png";
 
 // Define the default responseFin object (optional fallback)
 const responseFin = {
@@ -45,13 +47,19 @@ const LearningPathPage: React.FC = () => {
     return (
         <div className="flex flex-col items-center justify-center min-h-screen px-4 font-rubik bg-gray-100">
             <h1 className="text-4xl mb-6">Learning Path</h1>
-            <Tree data={data} />
+            <Tree data={data}/>
             <LogButton
                 color="bg-gray-400 text-lg text-white mt-6"
                 onClick={() => navigate(-1)}
             >
                 BACK
             </LogButton>
+            <div
+                className="fixed bottom-4 right-4 cursor-pointer"
+                onClick={() => navigate(ROUTES.CHATBOT)} // Adjust the route as per your routing setup
+            >
+                <img src={finpalImage} alt="FinPal" className="w-16 h-16" draggable="false"/>
+            </div>
         </div>
     );
 };

@@ -5,4 +5,5 @@ export const ROUTES = {
     EVALUATE_CONTEXT: "/evaluate-context",
     FINPAL: "/finpal",
     LEARNINGPATH: "/learningpath",
+    CHATBOT:"/chatbot"
 }
