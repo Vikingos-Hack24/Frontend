@@ -1,6 +1,7 @@
 import { RouteObject, createBrowserRouter } from "react-router-dom";
 import { ROUTES } from "./constants";
 import {Home, LogInPage, SignUpPage, EvaluationPage, FinPalHome} from "../pages";
+import LearningPathPage from "../pages/LearningPath/LearningPath.tsx";
 
 const routes: RouteObject[] = [
     {
@@ -23,6 +24,10 @@ const routes: RouteObject[] = [
         path: ROUTES.EVALUATE_CONTEXT,
         element: <EvaluationPage />,
     },
+    {
+        path: ROUTES.LEARNINGPATH,
+        element: <LearningPathPage/>
+    }
 
 ];
 

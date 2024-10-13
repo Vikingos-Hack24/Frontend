@@ -1,10 +1,12 @@
+// src/pages/EvaluationPage/EvaluationPage.tsx
 import { useState, ChangeEvent, FormEvent, useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import {LogButton} from "../../components";
+import { LogButton } from "../../components";
 import { UserContext } from "../../contexts/UserContext";
 import { evaluateContext } from "../../services/userRequests/contextService";
 import finpalImage from "/pal_icon_happy.png";
 import "./ContextEvaluationPage.css";
+import { ROUTES } from "../../routes";
 
 const EvaluationPage = () => {
     const navigate = useNavigate();
@@ -31,7 +33,7 @@ const EvaluationPage = () => {
                 text: context,
             });
             console.log("Respuesta del servidor:", response);
-            navigate("/learning-path", { state: { data: response } });
+            navigate(ROUTES.LEARNINGPATH, { state: { data: response } });
         } catch (err: any) {
             console.error("Error al enviar la solicitud:", err);
             if (err.response && err.response.data && err.response.data.detail) {
@@ -93,7 +95,7 @@ const EvaluationPage = () => {
             )}
         </div>
     );
-};
 
+};
 
 export default EvaluationPage;
